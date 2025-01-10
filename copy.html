@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <title>Pharmaciaonline</title>
+        <link rel="shortcut icon" type="" href="imagens/favicon7.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+      
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      
+        <link rel="stylesheet" href="css/style.css">
+      
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Medicamentos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        button {
+            background-color: #51eaea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3dd8d8;
+        }
+
+        #medicationInfo {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            display: none;
+        }
+
+        #medicationInfo h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        #medicationInfo p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+        .site-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .site-wrap {
+            padding-top: 80px; /* Adjust this value based on the height of your navbar */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons-btn {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrap">
+
+
+        <div class="site-navbar py-2">
+    
+          <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="logo">
+                <div class="site-logo">
+                  <a href="index.html" class="js-logo-clone">Pharmaciaonline</a>
+    
+                </div>
+              </div>
+              <div class="main-nav d-none d-lg-block">
+                <nav class="site-navigation text-right text-md-center" role="navigation">
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="loja.html">Productos</a></li>
+                    <li class="has-children">
+                      <a href="#">Categorias<svg class="bi bi-arrow-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                          <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z" />
+                        </svg></a>
+                      <ul class="dropdown">
+                        <li><a href="bebés.html">Producto para bebés</a></li>
+                        <li class="has-children">
+                       
+                        </li>
+                        <li><a href="loja.html">Medicamentos</a></li>
+                        <li><a href="Higiene.html">Higiene </a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contato.html">Contacto</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="icons">
+                <a href="#" class="icons-btn d-inline-block js-search-open"></a>
+                <a href="carrinho.html" class="icons-btn d-inline-block bag">
+                  <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                  </svg>
+                  <span class="number"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <div class="container" style="margin-top: 30px;">
+        <h1>Información de Medicamentos</h1>
+        <p class="subtitle">Selecciona un medicamento para obtener información</p>
+
+        <form id="medicationForm">
+            <div class="form-group">
+                <label for="medication">Seleccionar Medicamento</label>
+                <select id="medication" name="medication" required>
+                    <option value="">Elegir medicamento</option>
+                    <option value="paracetamol">Paracetamol</option>
+                    <option value="ibuprofeno">Ibuprofeno</option>
+                    <option value="aspirina">Aspirina</option>
+                    <option value="amoxicilina">Amoxicilina</option>
+                    <option value="omeprazol">Omeprazol</option>
+                </select>
+            </div>
+
+            <button type="submit">Obtener Información</button>
+        </form>
+
+        <div id="medicationInfo"></div>
+    </div>
+
+    <script>
+        const medicationInfo = {
+            paracetamol: {
+                nombre: "Paracetamol",
+                descripcion: "Analgésico y antipirético utilizado para aliviar el dolor leve a moderado y reducir la fiebre.",
+                dosis: "Adultos: 500-1000 mg cada 4-6 horas, máximo 4000 mg por día.",
+                efectosSecundarios: "Raros, pero pueden incluir reacciones alérgicas, problemas hepáticos con dosis altas."
+            },
+            ibuprofeno: {
+                nombre: "Ibuprofeno",
+                descripcion: "Antiinflamatorio no esteroideo (AINE) usado para aliviar dolor, fiebre e inflamación.",
+                dosis: "Adultos: 200-400 mg cada 4-6 horas, máximo 1200 mg por día.",
+                efectosSecundarios: "Pueden incluir molestias gastrointestinales, úlceras y aumento del riesgo cardiovascular."
+            },
+            aspirina: {
+                nombre: "Aspirina",
+                descripcion: "AINE con propiedades analgésicas, antipiréticas y antiinflamatorias. También se usa como anticoagulante.",
+                dosis: "Adultos: 325-650 mg cada 4-6 horas, máximo 4000 mg por día.",
+                efectosSecundarios: "Irritación gástrica, aumento del riesgo de sangrado."
+            },
+            amoxicilina: {
+                nombre: "Amoxicilina",
+                descripcion: "Antibiótico de amplio espectro utilizado para tratar una variedad de infecciones bacterianas.",
+                dosis: "Varía según la infección. Común: 250-500 mg cada 8 horas.",
+                efectosSecundarios: "Diarrea, náuseas, reacciones alérgicas."
+            },
+            omeprazol: {
+                nombre: "Omeprazol",
+                descripcion: "Inhibidor de la bomba de protones usado para reducir la producción de ácido estomacal.",
+                dosis: "Típicamente 20 mg una vez al día.",
+                efectosSecundarios: "Dolor de cabeza, diarrea, náuseas, riesgo de deficiencia de vitamina B12 con uso prolongado."
+            }
+        };
+
+        document.getElementById('medicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedMedication = document.getElementById('medication').value;
+            const infoDiv = document.getElementById('medicationInfo');
+            
+            if (selectedMedication && medicationInfo[selectedMedication]) {
+                const info = medicationInfo[selectedMedication];
+                infoDiv.innerHTML = `
+                    <h2>${info.nombre}</h2>
+                    <p><strong>Descripción:</strong> ${info.descripcion}</p>
+                    <p><strong>Dosis típica:</strong> ${info.dosis}</p>
+                    <p><strong>Efectos secundarios comunes:</strong> ${info.efectosSecundarios}</p>
+                `;
+                infoDiv.style.display = 'block';
+            } else {
+                infoDiv.innerHTML = '<p>Por favor, selecciona un medicamento válido.</p>';
+                infoDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+

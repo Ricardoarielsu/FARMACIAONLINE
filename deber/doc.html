@@ -1,0 +1,75 @@
+<HTML> 
+<HEAD> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<TITLE>Ejemplo 9 - Formularios </TITLE> 
+<style>
+body{
+    background-color: #87CEEB;
+    font-family:"Margarine", sans-serif;
+    font-size: x-large;
+    color:  #008000;  
+}
+table{
+    font-size: x-large;
+    border: #e67e22 4px solid;
+}
+font{
+ color: #FF6B6B;
+
+}
+</style>
+</HEAD> 
+<BODY> 
+<FORM action="mailto: lml @um. es" method="post">
+ <td><font>Tu Nombre:</font> <INPUT type=text name=nombre size=30>
+<td><font>Tu Clave:</font> <INPUT type=password name=clave size= 8>
+<P>
+<font>Archivos a Enviar:</font><br>
+
+    <table>
+        <tr>   
+<td><INPUT type=checkbox name=archivo value="Manual" >  Manual de Html
+<td><INPUT type=checkbox name=archivo value="Mapthis">   Programa Mapthis 
+<td><INPUT type=checkbox name=archivo value="Help">  Archivo de Ayuda       
+    </tr>
+    <tr>
+        <td><img src="download-removebg-preview.png" height="200px"></td>
+        <td></td>
+        <td><img src="download.png" height="200px"></td>
+    </tr>
+<P>
+</table>
+<br>
+<font>Tu edad:</font><BR> 
+<table>
+<td><INPUT type=radio name=edad value="-20" > Menos de 20 años 
+<td><INPUT type=radio name=edad value="20-40" > Entre 20 y 40 años 
+<td><INPUT type=radio name=edad value="+40" > Más de 40 años 
+</table>
+<br>
+<INPUT type=hidden name-lugar value="página personal" > 
+<font>¿Cómo encontraste mi página?</font>
+<SELECT name=donde > 
+<OPTION> De casualidad 
+<OPTION> Por el buscador 0le
+<OPTION> Por el buscador Yahoo 
+<OPTION> Me la recomendaron
+</SELECT>
+<br>
+<br>
+<P>
+<font>Tus comentarios:</font>
+<BR> 
+<TEXTAREA name=comentario rows=5 cols=40 wrap=virtual>   
+</TEXTAREA>
+
+<P> 
+<INPUT type=submit value="Enviar">
+<INPUT type=reset value="Borrar" >
+</table>
+
+</FORM> 
+</BODY> 
+</HTML>

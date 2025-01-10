@@ -1,0 +1,48 @@
+    <html>
+<head>
+    <title>Ticket</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: crimson;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    Venta de Ticket
+    <form action="mailto:lml@um.es" method="post">
+        Tu Nombre: <input type="text" name="nombre" size="30">
+        Tu correo <input type="email" name="email" size="25"><br>
+        <br>
+        <input type="hidden" name="edad" value="página personal">
+        Tu Edad:
+        <select name="edad">
+        <br>    
+            <option>----</option>
+            <option> Menos de 20 años</option>
+            <option> Entre 20 y 40 años</option>
+            <option> Más de 40 años</option>
+        </select><br>
+        <br>
+
+        Entradas:<br>
+        <table border="2px">
+            <tr>
+              
+        <td><center>Parque Marino Valdivia</center><br>
+        <td><center>Parque Histórico de Guayaquil</center><br>
+            </tr> 
+            <tr>
+                <td><center><img src="A.jpg" width="200px" height="150px"><br><input type="button" name="Ticket" value="$5 adultos"><input type="button" name="Ticket" value=" $2,50 menores de 12 años"></center></td>
+                <td><center><img src="guayaquil_historical_park.jpg" width="200px" height="150px"><br><input type="button" name="Ticket" value="$2 dolar"></center></td>
+            </tr>
+        </table>
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>

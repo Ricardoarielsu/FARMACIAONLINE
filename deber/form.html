@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Ejemplo 9 - Formularios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Margarine&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color:goldenrod;
+    font-size: x-large;
+    font-family: "Anton SC", sans-serif;
+    color: blue;  
+        }
+
+
+        table{
+    font-size: x-large;
+    border: blueviolet 4px solid;
+        }
+    </style>
+</head>
+<body>
+    <form action="mailto:lml@um.es" method="post">
+        Tu Nombre: <input type="text" name="nombre" size="30"><br>
+        Tu Clave: <input type="password" name="clave" size="8"><br>
+        <table border="4px">
+            <tr>
+        <td colspan="4"><center><font color="red">Archivos a Enviar:</font></center></td><br>
+            </tr>
+            <tr>
+        <td><input type="checkbox" name="archivo" value="Manual"> Manual de HTML
+        <td><input type="checkbox" name="archivo" value="Mapthis"> Programa Mapthis
+        <td><input type="checkbox" name="archivo" value="Help"> Archivo de Ayuda
+            </tr>
+            <tr>
+                <td><img src="OIP-removebg-preview.png" width="" height="200px"></td>
+                <td><img src="location_file_14330-removebg-preview.png" width="" height="200px"></td>
+                <td><img src="OIP-removebg-preview (1).png" width="" height="200px"></td>
+            </tr>
+        </table>
+        <br>
+        <table border="4px">
+        <tr>
+        <td colspan="4"><center><font color="red">Tu Edad:</font></center> <center><img src="353-3535161_age-png-removebg-preview.png" height="200px"></center> 
+        </tr>
+        <tr>
+       <td><input type="radio" name="edad" value="-20"> Menos de 20 años
+       <td><input type="radio" name="edad" value="20-40"> Entre 20 y 40 años
+       <td><input type="radio" name="edad" value="+40"> Más de 40 años
+        </tr>
+        </table>
+        <br>
+        <input type="hidden" name="lugar" value="página personal">
+        <font color="red">¿Cómo encontraste mi página?</font>
+        <br>
+        <select name="donde">
+            <option>De casualidad</option>
+            <option>Por el buscador 0le</option>
+            <option>Por el buscador Yahoo</option>
+            <option>Me la recomendaron</option>
+        </select><br>
+        <img src="download-removebg-preview.png" alt="">
+        <br>
+        <font color="red">Tus comentarios:<br></font>
+        <textarea name="comentario" rows="5" cols="40" wrap="virtual"></textarea><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
